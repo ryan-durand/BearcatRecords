@@ -1,0 +1,154 @@
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  /* background-image: linear-gradient(to bottom,rgba(100, 5, 68, 1), rgba(12, 71, 230, 1)); */
+  background-image: linear-gradient(to bottom,rgba(0, 0, 0, 1), rgba(145, 10, 15, 1));
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  padding: 3% 15%;
+}
+
+.navbar-logo {
+  height: 125px;
+}
+
+.navbar a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-item3 {
+  padding: 0 33px 0 18px;
+}
+
+/* Title */
+#title h1 {
+  text-shadow: 2px 2px #910a0f;
+  font-size: 6rem;
+  font-family: 'Righteous', sans-serif;
+}
+
+#title h4 {
+  margin: 0 20%;
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+/* hr */
+
+hr {
+  border: 0 solid #eeedef;
+  border-top-width: 1px;
+  height: 0;
+  margin: 60px auto;
+  clear: both;
+  display: block;
+  width: 500px;
+  position: relative;
+}
+/* Dots on end of HR */
+/* hr:before {
+  content: " ";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  background-color: #999;
+} */
+
+hr:before {
+  left: 0;
+  bottom: -3px;
+box-shadow: 400px 0 0 -1px #999, 400px 0 0 0 #aaa;
+}
+hr:after {
+  /* Can insert image here */
+  content:url();
+
+  display:block;
+  position:absolute;
+  left:50%;
+  height:50px;
+  width:50px;
+  margin:-25px 0 0 -25px;
+  border-radius:50px;
+  overflow:hidden;
+  box-shadow: 0 0 0 1px #eef, 0 0 5px;
+}
+
+hr {transform:scale(2)}
+
+/* Media listing section */
+
+.album-section {
+  padding: 3% 15% 0 15%;
+}
+
+.album-art {
+  height: 200px;
+  padding: 0 0 3% 0;
+}
+
+.album-info {
+  padding: 5% 0 0 0;
+}
+
+.album-title {
+  font-weight: 400;
+}
+
+.media-class {
+  font-weight: 400;
+}
+
+.listen-button {
+  color: #fff;
+  text-shadow: 1px 1px #8D8F8F;
+  background-color: #FF12D5;
+  outline-style: solid;
+  outline-color: #1BCFDC;
+  outline-width: 1px;
+}
+
+/* Footer */
+#footer {
+  padding: 5%;
+}
+
+.footer-icon {
+  margin: 10px 10px 30px 10px;
+}
+
+@media (max-width: 1028px) {
+  #title {
+    text-align: center;
+  }
+
+  .title-img {
+    position: static;
+    transform: rotate(0);
+  }
+}
