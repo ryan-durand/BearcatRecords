@@ -25,12 +25,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+  <style>
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr 2fr);
+    }
+
+    .wrapper>div {
+      padding: 2em;
+    }
+  </style>
 </head>
 
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="">
+    <a class="navbar-brand" href="album">
       <img class="navbar-logo" src="images/logo.png" alt="logo.png">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,6 +60,9 @@
         <li class="nav-item nav-item3">
           <a class="nav-link" href="#footer">Contact</a>
         </li>
+        <li class="nav-item">
+          <input type="text" placeholder="Search..">
+        </li>
       </ul>
     </div>
   </nav>
@@ -66,60 +79,57 @@
 
   <!-- Media listing section -->
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+  <div class="wrapper">
+    <div class="album">
       <div>
-        <img class="album-art" src="images/1000_gecs.jpg" alt="1000_gecs-art">
+        <div>
+          <img class="album-art" src="images/1000_gecs.jpg" alt="1000_gecs-art">
+        </div>
+        <button type="button" class="btn btn-md listen-button">
+          <a href="https://www.youtube.com/watch?v=UEI7VxVD028&list=PL9F2Wnx_segXw6qJMquQ0j9znWO8gPT-K" target="_blank" style="color:inherit">
+            <i class="fas fa-music"></i> Listen Now</a>
+        </button>
       </div>
-      <button type="button" class="btn btn-md listen-button">
-        <a href="https://www.youtube.com/watch?v=UEI7VxVD028&list=PL9F2Wnx_segXw6qJMquQ0j9znWO8gPT-K" target="_blank" style="color:inherit">
-          <i class="fas fa-music"></i> Listen Now</a>
-      </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">100 Gecs - 1000 Gecs</h2>
       <h6 class="media-class">Vinyl, LP, Album, Limited Edition, Reissue, Repress, Smoke Green</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
-        <img class="album-art" src="images/tree_of_clues.jpg" alt="tree_of_clues-art">
+        <div>
+          <img class="album-art" src="images/tree_of_clues.jpg" alt="tree_of_clues-art">
+        </div>
+        <button type="button" class="btn btn-md listen-button">
+          <a href="https://www.youtube.com/watch?v=ZU4g5DRnKdI&list=PLzu19_hLeADwTIMH1tbdSK6Y-C07AABQN" target="_blank" style="color:inherit">
+            <i class="fas fa-music"></i> Listen Now</a>
+        </button>
       </div>
-      <button type="button" class="btn btn-md listen-button">
-        <a href="https://www.youtube.com/watch?v=ZU4g5DRnKdI&list=PLzu19_hLeADwTIMH1tbdSK6Y-C07AABQN" target="_blank" style="color:inherit">
-          <i class="fas fa-music"></i> Listen Now</a>
-      </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">100 Gecs - 1000 Gecs And The Tree Of Clues</h2>
       <h6 class="media-class">Vinyl, LP, Album, Limited Edition, Green (Ghostly)</h6>
     </div>
-  </div>
 
-
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
-        <img class="album-art" src="images/AOL.jpg" alt="AOL-art">
+        <div>
+          <img class="album-art" src="images/AOL.jpg" alt="AOL-art">
+        </div>
+        <button type="button" class="btn btn-md listen-button">
+          <a href="https://www.youtube.com/watch?v=28q5XVELywI" target="_blank" style="color:inherit">
+            <i class="fas fa-music"></i> Listen Now</a>
+        </button>
       </div>
-      <button type="button" class="btn btn-md listen-button">
-        <a href="https://www.youtube.com/watch?v=28q5XVELywI" target="_blank" style="color:inherit">
-          <i class="fas fa-music"></i> Listen Now</a>
-      </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">AOL America Online - AOL Trial Disc</h2>
       <h6 class="media-class">Vinyl, 5″, Limited Edition, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+
+    <div class="album">
       <div>
         <img class="album-art" src="images/collapse.jpg" alt="collapse-art">
       </div>
@@ -128,32 +138,26 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Aphex Twin - Collapse EP</h2>
       <h6 class="media-class">Vinyl, 12", EP, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
-        <img class="album-art" src="images\saw85-92.jpg" alt="saw85-92-art">
+        <img class="album-art" src="images/saw85-92.jpg" alt="saw85-92-art">
       </div>
       <button type="button" class="btn btn-md listen-button">
         <a href="https://www.youtube.com/watch?v=Xw5AiRVqfqk" target="_blank" style="color:inherit">
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Aphex Twin - Selected Ambient Works 85-92</h2>
       <h6 class="media-class">2 × Vinyl, LP, Album, Reissue, Remastered</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/syro.jpg" alt="syro-art">
       </div>
@@ -162,15 +166,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Aphex Twin - Syro</h2>
       <h6 class="media-class">3 × Vinyl, LP, Album</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/tri_repetae.jpg" alt="tri_repetae-art">
       </div>
@@ -179,15 +180,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Autechre - Tri Repetae</h2>
       <h6 class="media-class">2 × Vinyl, LP, Album, Reissue, Repress, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/bay_fac_demo.jpg" alt="bay_fac_demo-art">
       </div>
@@ -196,15 +194,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Bay Faction - Bay Faction (demo)</h2>
       <h6 class="media-class">Vinyl, 7", Demo, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/bay_fac_st.jpg" alt="bay_fac_st-art">
       </div>
@@ -213,15 +208,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Bay Faction - s/t</h2>
       <h6 class="media-class">Vinyl, LP, Album, Repress, White</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/florida_guilt.jpg" alt="flordia_guilt-art">
       </div>
@@ -230,15 +222,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Bay Faction - Florida Guilt</h2>
       <h6 class="media-class">Vinyl, LP, Album, Baby Barf Clear</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/futaytadtp.jpg" alt="futaytadtp.jpg-art">
       </div>
@@ -247,15 +236,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Bedwetter ‎– Volume 1: Flick Your Tongue Against Your Teeth And Describe The Present</h2>
       <h6 class="media-class">Vinyl, LP, Album, Limited Edition, Reissue, Swamp Green</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/music_has_the_right.jpg" alt="music-has-the-right-art">
       </div>
@@ -264,15 +250,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Boards of Canada - Music Has The Right To Children</h2>
       <h6 class="media-class">2 × Vinyl, LP, Album, Reissue, Repress</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/twoism.jpg" alt="twoism-art">
       </div>
@@ -281,15 +264,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Boards of Canada - Twoism</h2>
       <h6 class="media-class">Vinyl, LP, Album, Reissue</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/burt_bach.jpg" alt="burt_bach-art">
       </div>
@@ -298,15 +278,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Burt Bacharach - Burt Bacharach's Greatest Hits</h2>
       <h6 class="media-class">Vinyl, Compilation, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/mhw.jpg" alt="mhw-art">
       </div>
@@ -315,15 +292,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Capcom Sound Team - モンスターハンター15周年記念盤 オリジナル・サウンドトラック (Monster Hunter 15th Anniversary Original Soundtrack)</h2>
       <h6 class="media-class">2 x Vinyl (Gatefold), Compilation, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/charli.jpg" alt="charli-art">
       </div>
@@ -332,15 +306,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Charli XCX - Charli</h2>
       <h6 class="media-class">2 x Vinyl (Gatefold), LP, Album, Clear</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/how_im_feeling_now.png" alt="how_im_feeling_now-art">
       </div>
@@ -349,15 +320,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Charli XCX - How I'm Feeling Now</h2>
       <h6 class="media-class">Vinyl, LP, Album, Orange (Neon) Translucent</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/vroom_vroom.jpg" alt="vroom_vroom-art">
       </div>
@@ -366,15 +334,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Charli XCX - Vroom Vroom EP</h2>
       <h6 class="media-class">Vinyl, EP, Limited Edition, Reissue, Clear</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/alls_well.jpg" alt="aw-art">
       </div>
@@ -383,15 +348,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Chiodos - All's Well That Ends Well</h2>
       <h6 class="media-class">Vinyl, LP, Album, Repress, Pink</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/discovery.jpg" alt="discovery-art">
       </div>
@@ -400,15 +362,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Daft Punk - Discovery</h2>
       <h6 class="media-class">2 × Vinyl, LP, Album, Reissue</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/atrocity_exhib.jpg" alt="atrocity_exhib-art">
       </div>
@@ -417,15 +376,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Danny Brown - Atrocity Exhibition</h2>
       <h6 class="media-class">2 × Vinyl, LP, Album, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/high_street_creeps.jpg" alt="high_street_creeps-art">
       </div>
@@ -434,15 +390,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Feed Me - High Street Creeps</h2>
       <h6 class="media-class">3 x Vinyl, LP, Album, Deluxe Edition, White w/ Black & Orange Splatter</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/you're_dead.jpg" alt="yd-art">
       </div>
@@ -451,15 +404,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Flying Lotus - You're Dead</h2>
       <h6 class="media-class">2 x Vinyl (Gatefold), LP, Album, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/galaxy_news_radio.jpg" alt="galaxy_news_radio-art">
       </div>
@@ -468,15 +418,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Galaxy News Radio: Radio Selections From The Fallout 3 Soundtrack</h2>
       <h6 class="media-class">Vinyl, Limited Edition, Reissue, Compilation, Nuka Cola Bottle</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/giles_corey.jpg" alt="giles_corey-art">
       </div>
@@ -485,15 +432,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Giles Corey - Giles Corey</h2>
       <h6 class="media-class">2 x Vinyl (Gatefold), LP, Album, Reissue, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/the_silence_in_black_and_white.jpg" alt="the_silence_in_black_and_white-art">
       </div>
@@ -502,15 +446,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Hawthorne Heights - The Silence In Black And White</h2>
       <h6 class="media-class">Vinyl, LP, Album, Repress, Baby Blue</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/ih4n.jpg" alt="ih4n-art">
       </div>
@@ -519,15 +460,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">I Have Four Names - IH4N (DX)</h2>
       <h6 class="media-class">Vinyl, LP, Album, Green/Orange</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/hybrid_theory.jpg" alt="hybrid_theory-art">
       </div>
@@ -536,15 +474,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Linkin Park - Hybrid Theory</h2>
       <h6 class="media-class">LP, Album, CD</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/metorea.jpg" alt="metorea-art">
       </div>
@@ -553,15 +488,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Linkin Park - Meteora</h2>
       <h6 class="media-class">CD, LP, Album, Enhanced, Digipak</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/host_in_the_hell.jpg" alt="host_in_the_hell-art">
       </div>
@@ -570,15 +502,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Love Spread - Host In The Hell (全ては愛の終わりの向こうに)</h2>
       <h6 class="media-class">Cassette, EP</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/RIPDIY.jpg" alt="RIPDIY-art">
       </div>
@@ -587,15 +516,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Love Spread - R.I.P.D.I.Y.</h2>
       <h6 class="media-class">Vinyl, EP, 7″, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/blue_slide_park.jpg" alt="blue_slide_park-art">
       </div>
@@ -604,15 +530,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Mac Miller - Blue Slide Park</h2>
       <h6 class="media-class">2 × Vinyl, LP, Album, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/biyaaheysf.jpg" alt="biyaaheysf-art">
       </div>
@@ -621,15 +544,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Machine Girl - ...Because I'm Young Arrogant And Hate Everything You Stand For</h2>
       <h6 class="media-class">Vinyl, LP, Album, Reissue, Repress, Limited Edition, Translucent Green</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/biyaaheysf.jpg" alt="biyaaheysf-art">
       </div>
@@ -638,15 +558,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Machine Girl - ...Because I'm Young Arrogant And Hate Everything You Stand For</h2>
       <h6 class="media-class">Vinyl, LP, Album, Limited Edition, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/biyaaheysf.jpg" alt="biyaaheysf-art">
       </div>
@@ -655,15 +572,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Machine Girl - ...Because I'm Young Arrogant And Hate Everything You Stand For</h2>
       <h6 class="media-class">Cassette, Album, Limited Edition</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/u-void.jpg" alt="u-void-art">
       </div>
@@ -672,15 +586,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Machine Girl - U-Void Synthesizer</h2>
       <h6 class="media-class">Cassette, LP, Album</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/the_ugly_art.jpg" alt="the_ugly_art-art">
       </div>
@@ -689,15 +600,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Machine Girl - The Ugly Art</h2>
       <h6 class="media-class">Cassette, LP, Album, Limited Edition, Reissue, Beige Shell</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/the_droogs.jpg" alt="the_droogs-art">
       </div>
@@ -706,15 +614,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Mars89 - The Droogs</h2>
       <h6 class="media-class">Vinyl, EP, Grey</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/pulse_demon2.jpg" alt="pulse_demon2-art">
       </div>
@@ -723,15 +628,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Merzbow - Pulse Demon</h2>
       <h6 class="media-class">2 × Vinyl, LP, Album, Limited Edition, Remastered, Repress, Milky Clear With Black Butterfly Wings And Neon Violet And Neon Green Splatter</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/youre_gonna_miss_it_all.jpg" alt="youre_gonna_miss_it_all-art">
       </div>
@@ -740,15 +642,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Modern Baseball - You're Gonna Miss It All</h2>
       <h6 class="media-class">Vinyl, LP, Album, Repress, Coke Bottle Clear</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/sports.jpg" alt="sports-art">
       </div>
@@ -757,15 +656,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Modern Baseball - Sports</h2>
       <h6 class="media-class">Vinyl, LP, Album, Repress, Purple</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/three_cheers.jpg" alt="three_cheers-art">
       </div>
@@ -774,15 +670,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">My Chemical Romance - Three Cheers For Sweet Revenge</h2>
       <h6 class="media-class">Vinyl, LP, Album, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/tekken_1.jpg" alt="tekken_1-art">
       </div>
@@ -791,17 +684,14 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Namco Sounds - Tekken Official Soundtrack</h2>
       <h6 class="media-class">Vinyl, LP, OST, Purple Translucent<br />
         Vinyl, LP, OST, Yellow Translucent<br />
         All Media Deluxe Edition, Limited Edition, Remastered</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/tekken_2.jpg" alt="tekken_2-art">
       </div>
@@ -810,34 +700,28 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Namco Sounds - Tekken 2 Official Soundtrack</h2>
       <h6 class="media-class">Vinyl, LP, OST, Orange Translucent<br />
         Vinyl, LP, OST, Blue Translucent<br />
         All Media, Deluxe Edition, Limited Edition, Remastered</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
-        <img class="album-art" src="images\queensgate.jpg" alt="queensgate-art">
+        <img class="album-art" src="images/queensgate.jpg" alt="queensgate-art">
       </div>
       <button type="button" class="btn btn-md listen-button">
         <a href="https://www.youtube.com/watch?v=I0H1cklVOLE" target="_blank" style="color:inherit">
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Nick Keeling - Queensgate</h2>
       <h6 class="media-class">Cassette</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/commissions_II.jpg" alt="commissions_II-art">
       </div>
@@ -846,15 +730,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Oneohtrix Point Never ‎– Commissions II</h2>
       <h6 class="media-class">Vinyl, EP, Limited Edition, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/magic.jpg" alt="magic-art">
       </div>
@@ -863,15 +744,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Oneohtrix Point Never ‎– Magic Oneohtrix Point Never</h2>
       <h6 class="media-class">2 x Vinyl (Gatefold), LP, Album, Limited Edition, Magenta Transparent</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/somewhere_city.jpg" alt="somewhere_city-art">
       </div>
@@ -880,15 +758,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Origami Angel - Somewhere City</h2>
       <h6 class="media-class">Vinyl, LP, Album, Limited Edition, Orange</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/a_fever_you_cant_sweat_out.jpg" alt="a_fever_you_cant_sweat_out-art">
       </div>
@@ -897,15 +772,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Panic! At The Disco - A Fever You Can't Sweat Out</h2>
       <h6 class="media-class">Vinyl, LP, Album, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/pretty_odd.jpg" alt="pretty_odd-art">
       </div>
@@ -914,15 +786,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Panic! At The Disco - Pretty Odd</h2>
       <h6 class="media-class">Vinyl, LP, Album, Repress, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/parasite.jpg" alt="parasite-art">
       </div>
@@ -931,15 +800,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Parasite Original Soundtrack</h2>
       <h6 class="media-class">2 × Vinyl (Gatefold), LP, OST, Limited Edition, Green [Green Grass]</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/blows_against_the_empire.jpg" alt="blows_against_the_empire-art">
       </div>
@@ -948,15 +814,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Paul Kantner / Jefferson Starship - Blows Against The Empire</h2>
       <h6 class="media-class">Vinyl, LP, Album, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/pure_mud_volume_7.jpg" alt="pure_mud_volume_7-art">
       </div>
@@ -965,15 +828,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Prolaps - Pure Mud Volume 7</h2>
       <h6 class="media-class">Cassette, Album, C54</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/kid_a.jpg" alt="kid_a-art">
       </div>
@@ -982,15 +842,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Radiohead - Kid A</h2>
       <h6 class="media-class">CD, LP, Album, Club Edition</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/runescape.jpg" alt="runescape-art">
       </div>
@@ -999,15 +856,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Runescape: Original Soundtrack Classics</h2>
       <h6 class="media-class">2 × Vinyl, LP, Album, Deluxe Edition, Red Opaque</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/runescape_wav2.jpg" alt="runescape_wav2-art">
       </div>
@@ -1016,15 +870,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">runescape斯凱利 ‎– runescape.wav2單戰利品的戰爭</h2>
       <h6 class="media-class">Cassette, Album, Limited Edition, Reissue, Mithril</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/heaven_inc.jpg" alt="heaven_inc-art">
       </div>
@@ -1033,15 +884,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Shlohmo - Heaven Inc</h2>
       <h6 class="media-class">Vinyl, EP, 7″, Black and Red Blob</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/the_end.jpg" alt="the_end-art">
       </div>
@@ -1050,15 +898,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Shlohmo - The End</h2>
       <h6 class="media-class">2 × Vinyl, LP, Album, Limited Edition, Orange Translucent</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/ghost_hemiola.jpg" alt="ghost_hemiola-art">
       </div>
@@ -1067,15 +912,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Stefan Goldmann - Ghost Hemiola</h2>
       <h6 class="media-class">2 × Vinyl, Empty Locked Grooves, Single Sided</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/vdc.jpg" alt="vdc-art">
       </div>
@@ -1084,17 +926,14 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Sweet Trip - Velocity : Design : Comfort</h2>
       <h6 class="media-class">Vinyl, LP, Clear<br />
         Vinyl, LP, Translucent Blue<br />
         All Media, Limited Edition, Reissue, Gatefold</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images\rodia.jpg" alt="rodia-art">
       </div>
@@ -1103,15 +942,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Swordfish - Rodia</h2>
       <h6 class="media-class">Cassette, EP</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/tigers_jaw.jpg" alt="tigers_jaw-art">
       </div>
@@ -1120,15 +956,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Tigers Jaw - s/t</h2>
       <h6 class="media-class">Vinyl, LP, Album, Repress, Purple/Orange Pinwheel</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/cherry_bomb.jpg" alt="cherry_bomb-art">
       </div>
@@ -1137,15 +970,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Tyler, The Creator - Cherry Bomb</h2>
       <h6 class="media-class">2 x Vinyl (Gatefold), LP, Album, Limited Edition, Red Translucent</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/goblin.jpg" alt="goblin-art">
       </div>
@@ -1154,15 +984,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Tyler, The Creator - Goblin</h2>
       <h6 class="media-class">2 × Vinyl, LP, Album, Black</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/plz-make-it-ruins.jpg" alt="plz-make-it-ruins-art">
       </div>
@@ -1171,15 +998,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Various ‎– Locked Groove</h2>
       <h6 class="media-class">Vinyl, LP, Compilation, Limited Edition</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/vib_ribbon.jpg" alt="vib_ribbon-art">
       </div>
@@ -1188,15 +1012,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Vib-Ribbon Original Soundtrack</h2>
       <h6 class="media-class">Vinyl, LP, OST, Limited Edition, White</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/end_of_world_rave.jpg" alt="end_of_world_rave-art">
       </div>
@@ -1205,15 +1026,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">wosX - End Of World Rave</h2>
       <h6 class="media-class">Vinyl, LP, Album, Yellow and Black (Biohazard)</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/the_flatlands.jpg" alt="the_flatlands-art">
       </div>
@@ -1222,15 +1040,12 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Young Statues - The Flatlands Are Your Friend</h2>
       <h6 class="media-class">Vinyl, LP, Album, Navy / White Marble</h6>
     </div>
-  </div>
 
-  <div class="row album-section">
-    <div class="col-lg-6">
+    <div class="album">
       <div>
         <img class="album-art" src="images/stranger.jpg" alt="stranger-art">
       </div>
@@ -1239,12 +1054,11 @@
           <i class="fas fa-music"></i> Listen Now</a>
       </button>
     </div>
-
-    <div class="col-lg-6 album-info">
+    <div class="album-info">
       <h2 class="album-title">Yung Lean - Stranger</h2>
       <h6 class="media-class">2 × Vinyl, LP, Album, Limited Edition, Reissue, Red w/ Black Splatter</h6>
     </div>
-  </div>
+  </div> <!-- @@@@@@@@@@@@@@@@@@@@@ end wrapper @@@@@@@@@@@@@@@@@@@@@ -->
 
   <!-- Footer -->
   <footer id="footer">
