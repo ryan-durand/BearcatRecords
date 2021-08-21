@@ -1,0 +1,62 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)), url(../css/images/record-store-925553_1920.jpg);
+  background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+#title {
+  padding: 7%;
+}
+
+/* Navbar */
+.navbar{
+  padding: 3% 15%;
+}
+
+.navbar-logo {
+  height: 125px;
+}
+
+.navbar a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.nav-item{
+  padding: 0 18px;
+}
+
+/* Main page text */
+.main-header {
+  font-family: 'Righteous';
+  font-size: 4rem;
+}
+
+.site-description {
+  margin: 0 30%;
+  font-size: 1.1rem;
+}
+
+.download-button {
+  margin-top: 2%;
+}
+
+/* Footer */
+
+#footer{
+  padding: 5%;
+}
+
+.footer-icon {
+  color: #fff;
+  margin: 10px 10px 30px 10px;
+}

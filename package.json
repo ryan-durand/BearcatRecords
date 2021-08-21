@@ -1,0 +1,24 @@
+{
+  "name": "bearcatrecords_html",
+  "version": "1.0.0",
+  "description": "A visualization of my physical media collection and a blog about the records and cassettes I seek to buy. Made with HTML/CSS (Bootstrap 4.5)",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryan-durand/BearcatRecords.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryan-durand/BearcatRecords/issues"
+  },
+  "homepage": "https://github.com/ryan-durand/BearcatRecords#readme"
+}
