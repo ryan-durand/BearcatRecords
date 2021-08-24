@@ -11,8 +11,19 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.static("public"));
 
+// Routing to homepage
 app.get("/", function(req, res){
     res.render("homepage");
+});
+
+// Routing to vault page
+app.get("/vault", function(req,res){
+    res.render("vault");
+});
+
+// Routing to most wanted page
+app.get("/mostwanted", function(req,res){
+    res.render("mostwanted");
 });
 
 // Set port to Heroku's port or localhost:3000
