@@ -1,5 +1,8 @@
 html {
-    background-image: url("images/cool-background.png");
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url("images/record-store-925553_1920.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     min-height: 1000px;
@@ -7,8 +10,11 @@ html {
   }
   
   .linkDescription {
+    background-color: #A683E3;
     color: white;
     text-align: center;
+    max-width: 500px;
+    margin: 50px auto;
   }
   
   h1 {
@@ -108,5 +114,9 @@ html {
   footer {
     color: white;
     text-align: center;
+  }
+
+  .footerCopyright {
+    color: white;
   }
   
