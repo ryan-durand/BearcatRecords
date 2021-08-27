@@ -119,7 +119,7 @@ app.post("/list", function (req, res) {
 app.post("/delete", function (req, res) {
   const checkedItemId = req.body.checkbox;
 
-  Album.findOneAndDelete(checkedItemId, function (err) {
+  Album.findByIdAndDelete(checkedItemId, function (err) {
     if (!err) {
       console.log("Entry deleted.");
       res.redirect("/list");
