@@ -3,6 +3,7 @@
 // Module declarations
 const express = require("express");
 const mongoose = require("mongoose");
+require('dotenv').config();
 
 // Set app to use EJS
 const app = express();
@@ -13,15 +14,11 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to Mongoose database backend
-mongoose.connect("mongodb://localhost:27017/musicDB", {
+// Login info masked by dotenv npm package
+mongoose.connect("mongodb+srv://"+process.env.DB_USER+":"+process.env.DB_PW+"@bcr-cluster.qrlch.mongodb.net/musicDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-
-// mongoose.connect("mongodb+srv://admin-ryan:BingBong1234@album-backlog.pewr9.mongodb.net/musicDB", {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// });
 
 // Schema for the list database
 const albumsSchema = mongoose.Schema({
