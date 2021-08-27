@@ -1,5 +1,4 @@
-# dotenv environment variables file
-.env
-
-# Dependency directories
-node_modules
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
