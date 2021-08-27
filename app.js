@@ -18,11 +18,6 @@ mongoose.connect("mongodb://localhost:27017/musicDB", {
   useUnifiedTopology: true,
 });
 
-// mongoose.connect("mongodb+srv://admin-ryan:BingBong1234@album-backlog.pewr9.mongodb.net/musicDB", {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// });
-
 // Schema for the list database
 const albumsSchema = mongoose.Schema({
   artist: {
